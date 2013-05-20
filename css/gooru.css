@@ -1,0 +1,103 @@
+body { 
+  margin: 0px;
+}
+#gooruChromeContainer { 
+  min-width:960px;
+}
+#gooruChromeSearchContainer { 
+/*   position: fixed; */
+  float:left;
+  width: 240px;
+  height: 100%;
+  z-index: 100;
+}
+
+#gooruChromeSearchContent {
+  width: 240px;
+  background-color: #ececec;
+  border-right: 1px solid #bdbdbd;
+  border-left: 1px solid #bdbdbd;
+  height: 100%;
+}
+#goorulogo { 
+  background: url("../images/sprite.png");
+  display: block;
+  width: 112px;
+  height: 50px;
+}
+
+#header { 
+  background-color: #515151;
+  height: 50px;
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#515151), to(#333));
+  background: -webkit-linear-gradient(top, #515151, #333);
+  background: -moz-linear-gradient(top, #515151, #333);
+  background: -ms-linear-gradient(top, #515151, #333);
+  background: -o-linear-gradient(top, #515151, #333);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+
+#goorubetaText {
+  color: #fff !important;
+  float: left;
+  font-weight: bold;
+  left: 112px;
+  position: relative;
+  top: 25px;
+  font-size: 12px;
+}
+#gooruChromeSearchTextField {
+  padding: 4px;
+  border: 1px solid #DDD;
+  font-family: arial, sans-serif;
+  font-size: 12px;
+  width: 226px;
+  height: 30px;
+  margin: 0 auto;
+  margin-top: 8px;
+  margin-left: 7px;
+}
+#gooruChromeSearchResultContainer {
+width: 78%;
+float: left;
+margin-left: 2px;
+}
+.featuredCollectionBox {
+width: 380px;
+border: 1px solid #ccc;
+height: 240px;
+float: left;
+margin: 20px;
+}
+/*.featuredOne:hover {
+  background:#000000;
+  opacity:0.3;
+  cursor:pointer;
+}*/
+#wrapper {
+width:100%;
+max-width: 1366px;
+float: left;
+}
+
+
+
+.featuredOne {   
+/*    height:200px;
+    width:200px;*/
+    background:#000000;
+    -webkit-transition: opacity 1s ease-in-out;
+       -moz-transition: opacity 1s ease-in-out;
+        -ms-transition: opacity 1s ease-in-out;
+         -o-transition: opacity 1s ease-in-out;
+            transition: opacity 1s ease-in-out;
+}
+
+.featuredOne:hover {
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.5;
+
+}

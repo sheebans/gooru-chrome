@@ -1,0 +1,21 @@
+{
+  "name": "Gooru Learning",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "Gooru makes it easy for students and teachers to find the best online educational resources.",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "app": {
+    "launch": {
+       "local_path": "gooru.html"
+    }
+  },
+  "icons": {
+    "16": "images/gooru-16x16.png",
+    "128": "images/gooru-128x128.png",
+    "256": "images/gooru-256x256.png"
+  },
+  "minimum_chrome_version": "14",
+  "permissions": [
+    "http://*/*"
+  ]
+}
