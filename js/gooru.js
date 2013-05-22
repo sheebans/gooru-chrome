@@ -41,6 +41,15 @@ var helper = {
 	    var featuredCollectionTemplate = new EJS({url:'templates/resource/featured-collection'}).render({data:data});
 	  
 	      $("#gooruChromeSearchResultContainer").html(featuredCollectionTemplate);
+
+	      $(".featuredCollectionBox").mouseover(function(){
+		$(this).find(".featuredCollectionDetailBox").css("display","block");
+		$(this).find(".playIcon").css("display","block");
+	      }); 
+	      $(".featuredCollectionBox").mouseout(function(){
+		$(this).find(".featuredCollectionDetailBox").css("display","none");
+		$(this).find(".playIcon").css("display","none");
+	      });
 	  }, 
 	error : function(data) {
 	  

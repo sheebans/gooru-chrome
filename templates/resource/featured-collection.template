@@ -4,10 +4,20 @@
 	      var imageUrl = data[i].scollections[0].thumbnails.url;
 	      var gooruOid = data[i].scollections[0].gooruOid;
 	      var title = data[i].scollections[0].title;
+	      var displayName = data[i].displayName;
 	      %>
 <div class="featuredCollectionBox featuredOne">
-<a target="_blank" href="http://www.goorulearning.org/gooru/index.g#!/collection/<%=gooruOid%>/play"><img src="<%=imageUrl%>" width=380 height=240 /></a>
-<div class="titleBox"><span class="featurTitle"><%=title%></span></div>
+ <a target="_blank" href="http://www.goorulearning.org/gooru/index.g#!/collection/<%=gooruOid%>/play"> <div class="playIcon" style="display:none;"></div></a>
+<img class="featureImg" src="<%=imageUrl%>" width=380 height=240 />
+  <div class="titleBox"><span class="featurTitle"><%=title%></span></div>
+
+    <div class="featuredCollectionDetailBox" style="display:none;">
+      <div class="didYouKnowBox">
+	<span class="didYouKnowText">Did you Know?</span>
+	<span class="displayName"><%=displayName%></span>
+      </div>
+    </div>
+  
 </div>
 
 <%}

@@ -71,21 +71,33 @@ height: 239px;
 float: left;
 margin: 59px 10px 10px 10px;
 }
-/*.featuredOne:hover {
-  background:#000000;
-  opacity:0.3;
-  cursor:pointer;
-}*/
+.featuredCollectionDetailBox {
+  width: 380px;
+  position: relative;
+  top: -288px;
+  bottom: 0;
+  background:rgba(0, 0, 0, 0.6);
+}
+.didYouKnowText, .displayName {
+  font-family:"arial";
+  padding-left:5px;
+  display: block;
+}
+.didYouKnowText {
+  color: #fefefe;
+  font-size: 18px;
+}
+.displayName {
+  font-size: 13px;
+  color:#ffffff;
+}
 #wrapper {
 width:100%;
 max-width: 1366px;
 float: left;
 }
-
-.featuredOne {   
-/*    height:200px;
-    width:200px;*/
-    background:#000000;
+ img.featureImg{   
+    background:rgba(0, 0, 0, 0.6);
     -webkit-transition: opacity 1s ease-in-out;
        -moz-transition: opacity 1s ease-in-out;
         -ms-transition: opacity 1s ease-in-out;
@@ -93,13 +105,13 @@ float: left;
             transition: opacity 1s ease-in-out;
 }
 
-.featuredOne:hover {
+img.featureImg:hover {
     zoom: 1;
     filter: alpha(opacity=50);
     opacity: 0.5;
 
 }
-.titleBox{
+.titleBox {
   width:380px;
   border:1px solid #cccccc;
   height:36px;
@@ -111,6 +123,17 @@ float: left;
   color:#515151;
 }
 .featurTitle {
-padding: 4px;
-display: block;
+  padding: 4px;
+  display: block;
+}
+.playIcon {
+  background: url("../images/play-icon.png") no-repeat;
+  width: 128px;
+  height: 128px;
+  display: block;
+  position: absolute;
+  margin-top: 57px;
+  margin-left: 116px;
+  cursor:pointer;
+  z-index: 9999;
 }
