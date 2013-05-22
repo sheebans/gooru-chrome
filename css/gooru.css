@@ -112,6 +112,8 @@ img.featureImg:hover {
 
 }
 .titleBox {
+  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%); 
   width:380px;
   border:1px solid #cccccc;
   height:36px;
