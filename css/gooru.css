@@ -74,10 +74,15 @@ body {
 }
 .featuredCollectionDetailBox {
   width: 380px;
+  height:240px;
   position: relative;
   top: -288px;
   bottom: 0;
   background:rgba(0, 0, 0, 0.6);
+}
+.featuredCollectionDetailBox:hover {
+    opacity: 0.3; 
+    transition:all 3s ease;
 }
 .didYouKnowText, .displayName {
   font-family:"arial";
@@ -96,21 +101,6 @@ body {
   width:100%;
   max-width: 1366px;
   float: left;
-}
- img.featureImg{   
-    background:rgba(0, 0, 0, 0.6);
-    -webkit-transition: opacity 1s ease-in-out;
-       -moz-transition: opacity 1s ease-in-out;
-        -ms-transition: opacity 1s ease-in-out;
-         -o-transition: opacity 1s ease-in-out;
-            transition: opacity 1s ease-in-out;
-}
-
-img.featureImg:hover {
-    zoom: 1;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
-
 }
 .titleBox {
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);

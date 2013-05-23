@@ -43,6 +43,7 @@ var helper = {
 	      $("#gooruChromeSearchResultContainer").html(featuredCollectionTemplate);
 
 	      $(".featuredCollectionBox").mouseover(function(){
+		
 		$(this).find(".featuredCollectionDetailBox").css("display","block");
 		$(this).find(".playIcon").css("display","block");
 	      }); 
@@ -50,6 +51,7 @@ var helper = {
 		$(this).find(".featuredCollectionDetailBox").css("display","none");
 		$(this).find(".playIcon").css("display","none");
 	      });
+	      	      
 	  }, 
 	error : function(data) {
 	  
