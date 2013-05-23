@@ -61,16 +61,16 @@ body {
   margin-left: 7px;
 }
 #gooruChromeSearchResultContainer {
-width: 78%;
-float: left;
-margin-left: 2px;
+  width: 78%;
+  float: left;
+  margin-left: 2px;
 }
 .featuredCollectionBox {
-width: 380px;
-border: 1px solid #ccc;
-height: 239px;
-float: left;
-margin: 59px 10px 10px 10px;
+  width: 380px;
+  border: 1px solid #ccc;
+  height: 239px;
+  float: left;
+  margin: 59px 10px 10px 10px;
 }
 .featuredCollectionDetailBox {
   width: 380px;
@@ -93,9 +93,9 @@ margin: 59px 10px 10px 10px;
   color:#ffffff;
 }
 #wrapper {
-width:100%;
-max-width: 1366px;
-float: left;
+  width:100%;
+  max-width: 1366px;
+  float: left;
 }
  img.featureImg{   
     background:rgba(0, 0, 0, 0.6);
