@@ -64,7 +64,7 @@ body {
   width: 61%;
   margin-left: 2px;
   margin: 0 auto;
-  border: 1px solid blue;
+/*   border: 1px solid blue; */
   position: relative;
   left: 130px;
 }
@@ -101,10 +101,10 @@ body {
   color:#ffffff;
 }
 #wrapper {
-  width: 100%;
+  width: 1345px;
   max-width: 1349px;
   float: left;
-  border: 1px solid red;
+/*   border: 1px solid red; */
 }
 .titleBox {
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
@@ -208,4 +208,99 @@ body {
   padding:0;
   line-height:1px;
   color:#515151;
+}
+.supportersLogoDiv {
+    width: 61%;
+    background-color: white;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 10px;
+    margin-top: 40px;
+    min-height: 160px;
+    margin:0 auto;
+    position:relative;
+    top:50px;
+    left:125px;
+}
+
+ul.supportersLogo {
+    float: left;
+    margin-top: 0;
+    padding: 10px 10px 10px 34px;
+}
+.supporterHeading {
+    color: #999999;
+    font-size: 20px;
+    margin-bottom: -15px;
+    margin-top: 10px;
+    padding: 10px 10px 10px 35px;
+    text-align: left;
+}
+
+ul.supportersLogo li {
+    float: left;
+    list-style: none outside none;
+    margin: 0 2px;
+}
+
+ul.supportersLogo a {
+    background-image: url("../images/GooruGuide.png");
+    display: block;
+    margin-right: 17px;
+}
+.onrNavy {
+    background-position: 227px -137px;
+    height: 50px;
+    width: 109px;
+}
+
+.billGates {
+    background-position: 229px -497px;
+    height: 50px;
+    width: 184px;
+}
+.hewlet {
+    background-position: 227px -1px;
+    height: 50px;
+    width: 110px;
+}
+.nextGen {
+    background-position: 230px -553px;
+    height: 50px;
+    width: 187px;
+}
+.scefDn {
+    background-position: 227px -267px;
+    height: 50px;
+    width: 72px;
+}
+.google {
+    background-position: 227px -377px;
+    height: 50px;
+    margin-right: 18px !important;
+    margin-top: 18px;
+    width: 120px;
+}
+.cisco {
+    background-position: 227px -68px;
+    height: 50px;
+    width: 90px;
+}
+.pearson {
+    background-position: 229px -437px;
+    height: 50px;
+    width: 139px;
+}
+.ramsriram {
+    background-image: url("../images/GooruGuide.png");
+    background-position: 224px -203px;
+    height: 50px;
+    margin-right: 22px;
+    width: 130px;
+}
+
+.fenwick {
+    background-position: 227px -326px;
+    height: 50px;
+    width: 130px;
 }
