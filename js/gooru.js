@@ -33,7 +33,7 @@ var helper = {
   loadFeaturedCollection:function() {
       $.ajax ({
 	  type : 'GET',
-	  url : GOORU_REST_ENDPOINT + '/featured/theme?sessionToken='+USER.sessionToken,
+	  url  : GOORU_REST_ENDPOINT + '/featured/theme?sessionToken='+USER.sessionToken,
 	  cache: false,
 	  dataType:'jsonp',
 	  success:function(data){
@@ -43,15 +43,16 @@ var helper = {
 	      $("#gooruChromeSearchResultContainer").html(featuredCollectionTemplate);
 
 	      $(".featuredCollectionBox").mouseover(function(){
-		
+		$(this).find(".featuredCollectionDetailBox").stop(true, true).fadeIn(700);		
 		$(this).find(".featuredCollectionDetailBox").css("display","block");
 		$(this).find(".playIcon").css("display","block");
 	      }); 
 	      $(".featuredCollectionBox").mouseout(function(){
+		$(this).find(".featuredCollectionDetailBox").stop(true, true).fadeOut(500);
 		$(this).find(".featuredCollectionDetailBox").css("display","none");
 		$(this).find(".playIcon").css("display","none");
 	      });
-	      	      
+	      
 	  }, 
 	error : function(data) {
 	  
@@ -64,3 +65,4 @@ $(document).ready(function() {
    helper.userSignin();
    helper.loadFeaturedCollection();
 });
+

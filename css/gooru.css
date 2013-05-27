@@ -83,10 +83,10 @@ body {
   bottom: 0;
   background:rgba(0, 0, 0, 0.6);
 }
-.featuredCollectionDetailBox:hover {
+/*.featuredCollectionDetailBox:hover {
     opacity: 0.3; 
     transition:all 3s ease;
-}
+}*/
 .didYouKnowText, .displayName {
   font-family:"arial";
   padding-left:5px;
@@ -219,7 +219,7 @@ body {
     min-height: 160px;
     margin:0 auto;
     position:relative;
-    top:50px;
+    top:70px;
     left:125px;
 }
 
