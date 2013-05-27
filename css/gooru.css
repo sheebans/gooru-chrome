@@ -123,6 +123,7 @@ body {
   border-bottom-right-radius:10px;
   font-size:14px;
   color:#515151;
+  margin-left:-1px;
 }
 .featurTitle {
   padding: 4px;
