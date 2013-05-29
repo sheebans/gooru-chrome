@@ -58,11 +58,41 @@ var helper = {
 	  
 	}
       });    
+  },
+   loadSearchResults:function(searchKeyword) {
+      $.ajax ({
+	  type : 'GET',
+	  url  : GOORU_REST_ENDPOINT + "/search/scollection",
+	  cache: false,
+	  data:{
+	    sessionToken:USER.sessionToken,
+	    query:searchKeyword,
+	    pageSize:20,
+	    pageNum:1
+	  },
+	  dataType:'jsonp',
+	  success:function(data){
+	    EJS.ext=".template";
+ 	    var featuredCollectionTemplate = new EJS({url:'templates/resource/collection-search-result'}).render({data:data});
+	  
+	      $("#gooruContentDiv").html(featuredCollectionTemplate);
+	  }, 
+	error : function(data) {
+	  
+	}
+      });    
   }
 };
 
 $(document).ready(function() {
    helper.userSignin();
    helper.loadFeaturedCollection();
+   
+   $("#gooruChromeSearchTextField").keyup(function(event){
+      if(event.which == 13){
+	var searchKeyword= $(this).val();
+	helper.loadSearchResults(searchKeyword);
+      }
+  });
 });
 

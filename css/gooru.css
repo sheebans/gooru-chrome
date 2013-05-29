@@ -66,17 +66,21 @@ body {
   margin-left: 7px;
 }
 #gooruChromeSearchResultContainer {
-  width: 61%;
   margin-left: 2px;
   margin: 0 auto;
-/*   border: 1px solid blue; */
   position: relative;
-  left: 130px;
+  left: 82px;
 }
 .featuredCollectionBox {
   width: 380px;
   border: 1px solid #ccc;
   height: 239px;
+  float: left;
+  margin: 59px 10px 10px 10px;
+}
+.searchCollectionBox {
+  width: 220px;
+  height: 140px;
   float: left;
   margin: 59px 10px 10px 10px;
 }
@@ -88,10 +92,7 @@ body {
   bottom: 0;
   background:rgba(0, 0, 0, 0.6);
 }
-/*.featuredCollectionDetailBox:hover {
-    opacity: 0.3; 
-    transition:all 3s ease;
-}*/
+
 .didYouKnowText, .displayName {
   font-family:"arial";
   padding-left:5px;
@@ -109,7 +110,6 @@ body {
   width: 1345px;
   max-width: 1349px;
   float: left;
-/*   border: 1px solid red; */
 }
 .titleBox {
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
@@ -130,6 +130,14 @@ body {
   display: block;
   padding-top: 9px;
 }
+.collectionTitle {
+  padding: 4px;
+  display: block;
+  padding-top: 9px;
+  font-size: 13px;
+  float: left;
+  color: #333;
+}
 .playIcon {
   background: url("../images/play-icon.png") no-repeat;
   width: 128px;
@@ -144,7 +152,6 @@ body {
 
 .learnMore {
   height: 387px;
-  width: 61%;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 4px 4px 4px 4px;
   margin-top: 66px;
@@ -152,55 +159,51 @@ body {
   clear: both;
   position: relative;
   top: 53px;
-  left:125px;
 }
 
 /*  */
-
-
 .learnMoreDiv {
-    font-size: 16px;
-    height: 347px;
-    margin-left: 16px;
+  font-size: 16px;
+  height: 347px;
+  margin-left: 16px;
 }
 
-
 .learnMoreHeading {
-    color: #999999;
-    font-family: arial;
-    font-size: 20px;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 7px;
+  color: #999999;
+  font-family: arial;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 7px;
 }
 
 .learnMoreTxtDiv {
-    float: left;
-    width: 316px;
+  float: left;
+  width: 316px;
 }
 
 .learnMoreVideoDiv {
-    margin-left: 35px;
+  margin-left: 35px;
 }
 
 .learnMoreButtonDiv {
-    float: left;
-    font-size: 12px;
-    height: 28px;
-    margin-top: 14px;
-    text-align: left;
+  float: left;
+  font-size: 12px;
+  height: 28px;
+  margin-top: 14px;
+  text-align: left;
  }
  .learnMoreButton {
-    background: -webkit-linear-gradient(top, #4c98cc, #1076bb);
-    border: medium none;
-    border-radius: 4px 4px 4px 4px;
-    color: #FFFFFF !important;
-    display: inline-block;
-    float: right;
-    font-family: Arial,sans-serif;
-    font-weight: bold;
-    padding: 12px 18px;
-    text-decoration: none !important;
+  background: -webkit-linear-gradient(top, #4c98cc, #1076bb);
+  border: medium none;
+  border-radius: 4px 4px 4px 4px;
+  color: #FFFFFF !important;
+  display: inline-block;
+  float: right;
+  font-family: Arial,sans-serif;
+  font-weight: bold;
+  padding: 12px 18px;
+  text-decoration: none !important;
 }
 
 .learnMoreText {
@@ -216,64 +219,62 @@ body {
   color:#515151;
 }
 .supportersLogoDiv {
-    width: 61%;
-    background-color: white;
-    border-radius: 4px 4px 4px 4px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    margin-right: 10px;
-    margin-top: 40px;
-    min-height: 160px;
-    margin:0 auto;
-    position:relative;
-    top:70px;
-    left:125px;
+  background-color: white;
+  border-radius: 4px 4px 4px 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-right: 10px;
+  margin-top: 40px;
+  min-height: 160px;
+  margin: 0 auto;
+  position: relative;
+  top: 70px;
 }
 
 ul.supportersLogo {
-    float: left;
-    margin-top: 0;
-    padding: 10px 10px 10px 34px;
+  float: left;
+  margin-top: 0;
+  padding: 10px 10px 10px 34px;
 }
 .supporterHeading {
-    color: #999999;
-    font-size: 20px;
-    margin-bottom: -15px;
-    margin-top: 10px;
-    padding: 10px 10px 10px 35px;
-    text-align: left;
+  color: #999999;
+  font-size: 20px;
+  margin-bottom: -15px;
+  margin-top: 10px;
+  padding: 10px 10px 10px 35px;
+  text-align: left;
 }
 
 ul.supportersLogo li {
-    float: left;
-    list-style: none outside none;
-    margin: 0 2px;
+  float: left;
+  list-style: none outside none;
+  margin: 0 2px;
 }
 
 ul.supportersLogo a {
-    background-image: url("../images/GooruGuide.png");
-    display: block;
-    margin-right: 17px;
+  background-image: url("../images/GooruGuide.png");
+  display: block;
+  margin-right: 17px;
 }
 .onrNavy {
-    background-position: 227px -137px;
-    height: 50px;
-    width: 109px;
+  background-position: 227px -137px;
+  height: 50px;
+  width: 109px;
 }
 
 .billGates {
-    background-position: 229px -497px;
-    height: 50px;
-    width: 184px;
+  background-position: 229px -497px;
+  height: 50px;
+  width: 184px;
 }
 .hewlet {
-    background-position: 227px -1px;
-    height: 50px;
-    width: 110px;
+  background-position: 227px -1px;
+  height: 50px;
+  width: 110px;
 }
 .nextGen {
-    background-position: 230px -553px;
-    height: 50px;
-    width: 187px;
+  background-position: 230px -553px;
+  height: 50px;
+  width: 187px;
 }
 .scefDn {
     background-position: 227px -267px;
@@ -281,32 +282,52 @@ ul.supportersLogo a {
     width: 72px;
 }
 .google {
-    background-position: 227px -377px;
-    height: 50px;
-    margin-right: 18px !important;
-    margin-top: 18px;
-    width: 120px;
+  background-position: 227px -377px;
+  height: 50px;
+  margin-right: 18px !important;
+  margin-top: 18px;
+  width: 120px;
 }
 .cisco {
-    background-position: 227px -68px;
-    height: 50px;
-    width: 90px;
+  background-position: 227px -68px;
+  height: 50px;
+  width: 90px;
 }
 .pearson {
-    background-position: 229px -437px;
-    height: 50px;
-    width: 139px;
+  background-position: 229px -437px;
+  height: 50px;
+  width: 139px;
 }
 .ramsriram {
-    background-image: url("../images/GooruGuide.png");
-    background-position: 224px -203px;
-    height: 50px;
-    margin-right: 22px;
-    width: 130px;
+  background-image: url("../images/GooruGuide.png");
+  background-position: 224px -203px;
+  height: 50px;
+  margin-right: 22px;
+  width: 130px;
 }
 
 .fenwick {
-    background-position: 227px -326px;
-    height: 50px;
-    width: 130px;
+  background-position: 227px -326px;
+  height: 50px;
+  width: 130px;
+}
+.collectionImageDiv {
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  padding: 2px;
+  width: 235px;
+  height: 186px;
+  text-align: center;
+  padding-top: 9px;
+}
+.collectionImg{
+  border: 1px solid #c6c6c6;
+  width:220px;
+  height:140px;
+}
+#gooruContentDiv {
+  margin: 0 auto;
+  width: 972px;
+  position: relative;
+  left: 121px;
 }

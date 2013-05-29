@@ -1,0 +1,29 @@
+ <%
+ for(var i in data.searchResults) {
+	      var imageUrl = data.searchResults[i].thumbnails.url;
+	      var gooruOid = data.searchResults[i].gooruOid;
+	      var title = data.searchResults[i].title;
+	      var displayName = "";
+	      %>
+<div class="searchCollectionBox featuredOne">
+ <a target="_blank" href="http://www.goorulearning.org/gooru/index.g#!/collection-play/<%=gooruOid%>/play"> <div class="playIcon" style="display:none;"></div></a>
+    <div class="collectionImageDiv">
+	<img class="collectionImg" src="<%=imageUrl%>" width=220 height=140 />
+	  <div class="titleBoxs"><span class="collectionTitle"><%=title%></span></div>
+    </div>
+
+
+    <div class="featuredCollectionDetailBox" style="display:none;">
+	<div class="didYouKnowBox">
+	  <span class="didYouKnowText">Did you Know?</span>
+	  <span class="displayName"><%=displayName%></span>
+	</div>
+    </div>
+  
+</div>
+
+<%}
+
+%>
+
+
