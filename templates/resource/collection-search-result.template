@@ -1,6 +1,10 @@
  <%
  for(var i in data.searchResults) {
-	      var imageUrl = data.searchResults[i].thumbnails.url;
+ var thumbnail = data.searchResults[i].thumbnail;
+var thumbnailName = thumbnail.substring(0, thumbnail.lastIndexOf("."));
+
+var extension = thumbnail.substring(thumbnail.lastIndexOf(".") + 1, thumbnail.length);
+	      var imageUrl = data.searchResults[i].assetURI+data.searchResults[i].folder+thumbnailName+"-120x90."+extension;
 	      var gooruOid = data.searchResults[i].gooruOid;
 	      var title = data.searchResults[i].title;
 	      var displayName = "";

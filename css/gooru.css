@@ -305,7 +305,7 @@ ul.supportersLogo a {
   margin-right: 22px;
   width: 130px;
 }
-
+../images
 .fenwick {
   background-position: 227px -326px;
   height: 50px;
@@ -330,4 +330,12 @@ ul.supportersLogo a {
   width: 972px;
   position: relative;
   left: 121px;
+}
+.ajaxLoader {
+background: url("../images/ajax-loader.gif");
+width: 66px;
+height: 66px;
+display: block;
+position: absolute;
+right: -31px;
 }

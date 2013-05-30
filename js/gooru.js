@@ -5,7 +5,7 @@ var API_KEY = 'ASERTYUIOMNHBGFDXSDWERT123RTGHYT';
 var USER = {
   sessionToken: 'a2adaf96-beee-11e2-ba82-123141016e2a'
 };
-
+var pageNum = 0;
 /* core stuff  */
 var helper = { 
     userSignin: function(options) { 
@@ -29,6 +29,15 @@ var helper = {
 	error : function(data) {
 	}
       });
+  },
+  activateScrollDown:function(){
+     //Load data on scroll 
+   $contentLoadTriggered = false;
+   $(window).scroll(function(){
+        if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+	    helper.loadSearchResults($("#gooruChromeSearchTextField").val(),++pageNum,true);
+        }
+  }); 
   },
   loadFeaturedCollection:function() {
       $.ajax ({
@@ -59,7 +68,8 @@ var helper = {
 	}
       });    
   },
-   loadSearchResults:function(searchKeyword) {
+   loadSearchResults:function(searchKeyword,pageNum,append) {
+   
       $.ajax ({
 	  type : 'GET',
 	  url  : GOORU_REST_ENDPOINT + "/search/scollection",
@@ -68,14 +78,19 @@ var helper = {
 	    sessionToken:USER.sessionToken,
 	    query:searchKeyword,
 	    pageSize:20,
-	    pageNum:1
+	    pageNum:pageNum
 	  },
 	  dataType:'jsonp',
 	  success:function(data){
 	    EJS.ext=".template";
  	    var featuredCollectionTemplate = new EJS({url:'templates/resource/collection-search-result'}).render({data:data});
-	  
+	  if(append){
+	       $("#gooruContentDiv").append(featuredCollectionTemplate);
+	  }else{
+	    
 	      $("#gooruContentDiv").html(featuredCollectionTemplate);
+	      helper.activateScrollDown();
+	  }
 	  }, 
 	error : function(data) {
 	  
@@ -89,10 +104,11 @@ $(document).ready(function() {
    helper.loadFeaturedCollection();
    
    $("#gooruChromeSearchTextField").keyup(function(event){
-      if(event.which == 13){
+      if(event.which == 13) {
 	var searchKeyword= $(this).val();
-	helper.loadSearchResults(searchKeyword);
+	helper.loadSearchResults(searchKeyword,1,false);
       }
   });
+  
 });
 
