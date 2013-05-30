@@ -331,11 +331,15 @@ ul.supportersLogo a {
   position: relative;
   left: 121px;
 }
-.ajaxLoader {
+.scrollContentLoader{
+  position: fixed; bottom: 0; right: 3;display:none;
+  
+}
+.loading {
 background: url("../images/ajax-loader.gif");
 width: 66px;
 height: 66px;
-display: block;
-position: absolute;
-right: -31px;
+display: block  !important;
+position: fixed;
+right: 2px;
 }

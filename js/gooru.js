@@ -35,9 +35,10 @@ var helper = {
    $contentLoadTriggered = false;
    $(window).scroll(function(){
         if  ($(window).scrollTop() == $(document).height() - $(window).height()){
+	  $("#scrollContentLoader").addClass("loading");
 	    helper.loadSearchResults($("#gooruChromeSearchTextField").val(),++pageNum,true);
         }
-  }); 
+   }); 
   },
   loadFeaturedCollection:function() {
       $.ajax ({
@@ -50,7 +51,7 @@ var helper = {
 	    var featuredCollectionTemplate = new EJS({url:'templates/resource/featured-collection'}).render({data:data});
 	  
 	      $("#gooruChromeSearchResultContainer").html(featuredCollectionTemplate);
-
+    
 	      $(".featuredCollectionBox").mouseover(function(){
 		$(this).find(".featuredCollectionDetailBox").stop(true, true).fadeIn(700);		
 		$(this).find(".featuredCollectionDetailBox").css("display","block");
@@ -91,6 +92,7 @@ var helper = {
 	      $("#gooruContentDiv").html(featuredCollectionTemplate);
 	      helper.activateScrollDown();
 	  }
+	   $("#scrollContentLoader").removeClass("loading");
 	  }, 
 	error : function(data) {
 	  
