@@ -92,19 +92,34 @@ body {
   bottom: 0;
   background:rgba(0, 0, 0, 0.6);
 }
+.collectionImageOverlay {
+width: 222px;
+height: 142px;
+position: relative;
+top: -189px;
+bottom: 0;
+background: rgba(0, 0, 0, 0.6);
+left: 10px;
+}
 
-.didYouKnowText, .displayName {
+.didYouKnowText, .displayName, .description {
   font-family:"arial";
   padding-left:5px;
   display: block;
 }
 .didYouKnowText {
   color: #fefefe;
-  font-size: 18px;
+  font-size: 15px;
 }
 .displayName {
   font-size: 13px;
   color:#ffffff;
+}
+.description {
+  font-size: 12px;
+  color:#ffffff;
+  font-style: italic;
+  padding-top:4px;
 }
 #wrapper {
   width: 1300px;
