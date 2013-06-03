@@ -107,7 +107,7 @@ body {
   color:#ffffff;
 }
 #wrapper {
-  width: 1345px;
+  width: 1300px;
   max-width: 1349px;
   float: left;
 }
@@ -131,12 +131,18 @@ body {
   padding-top: 9px;
 }
 .collectionTitle {
-  padding: 4px;
-  display: block;
-  padding-top: 9px;
-  font-size: 13px;
-  float: left;
-  color: #333;
+padding: 4px;
+display: block;
+padding-top: 9px;
+padding-left: 7px;
+font-size: 13px;
+float: left;
+color: #333;
+width: 168px;
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+text-align:left;
 }
 .playIcon {
   background: url("../images/play-icon.png") no-repeat;
@@ -342,4 +348,15 @@ height: 66px;
 display: block  !important;
 position: fixed;
 right: 2px;
+}
+.viewCounts {
+font-size: 12px;
+float: right;
+position: relative;
+right: 6px;
+padding-top: 8px;
+background: url("../images/view-icon-24x.24png") no-repeat scroll 0 7;
+width: 17;
+padding-left: 18px;
+opacity:0.6;
 }
