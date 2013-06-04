@@ -1,4 +1,5 @@
 <%
+
 function stringTruncate(string, limit) {
     var trimmed = "...";
     if(string.length > limit) {
@@ -6,9 +7,9 @@ function stringTruncate(string, limit) {
     }
      return string;
 }
-%>
- <%
- for(var i in data.searchResults) {
+
+
+for(var i in data.searchResults) {
   var thumbnail = data.searchResults[i].thumbnail;
   var thumbnailName = thumbnail.substring(0, thumbnail.lastIndexOf("."));
   var viewCount = data.searchResults[i].viewCount;

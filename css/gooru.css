@@ -369,6 +369,7 @@ ul.supportersLogo a {
   display:none;
   z-index:999;
 }
+
 .loading {
   background: url("../images/ajax-loader-bar.gif") no-repeat;
   width: 566px;
@@ -377,6 +378,7 @@ ul.supportersLogo a {
   position: fixed;
   right: 2px;
 }
+
 .viewCounts {
   font-size: 12px;
   float: right;
