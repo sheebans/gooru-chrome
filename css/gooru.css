@@ -90,7 +90,7 @@ body {
   position: relative;
   top: -288px;
   bottom: 0;
-  background:rgba(0, 0, 0, 0.6);
+  background:rgba(0, 0, 0, 0.8);
 }
 .collectionImageOverlay {
 width: 222px;
@@ -98,7 +98,7 @@ height: 142px;
 position: relative;
 top: -189px;
 bottom: 0;
-background: rgba(0, 0, 0, 0.6);
+background: rgba(0, 0, 0, 0.8);
 left: 10px;
 }
 
@@ -165,12 +165,22 @@ text-align:left;
   height: 128px;
   display: block;
   position: absolute;
-  margin-top: 57px;
-  margin-left: 116px;
-  cursor:pointer;
+  margin-top: 85px;
+  margin-left: 146px;
+  cursor: pointer;
   z-index: 9999;
 }
-
+.playIconSmall {
+  background: url("../images/play-small.png") no-repeat;
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  margin-top: 60px;
+  margin-left: 91px;
+  cursor: pointer;
+  z-index: 9999;
+}
 .learnMore {
   height: 387px;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -326,7 +336,7 @@ ul.supportersLogo a {
   margin-right: 22px;
   width: 130px;
 }
-../images
+
 .fenwick {
   background-position: 227px -326px;
   height: 50px;
@@ -341,7 +351,7 @@ ul.supportersLogo a {
   text-align: center;
   padding-top: 9px;
 }
-.collectionImg{
+.collectionImg {
   border: 1px solid #c6c6c6;
   width:220px;
   height:140px;
@@ -352,26 +362,29 @@ ul.supportersLogo a {
   position: relative;
   left: 121px;
 }
-.scrollContentLoader{
-  position: fixed; bottom: 0; right: 3;display:none;
-  
+.scrollContentLoader {
+  position: fixed; 
+  bottom: 0; 
+  left: 50%;
+  display:none;
+  z-index:999;
 }
 .loading {
-background: url("../images/ajax-loader.gif");
-width: 66px;
-height: 66px;
-display: block  !important;
-position: fixed;
-right: 2px;
+  background: url("../images/ajax-loader-bar.gif") no-repeat;
+  width: 566px;
+  height: 66px;
+  display: block  !important;
+  position: fixed;
+  right: 2px;
 }
 .viewCounts {
-font-size: 12px;
-float: right;
-position: relative;
-right: 6px;
-padding-top: 8px;
-background: url("../images/view-icon-24x.24png") no-repeat scroll 0 7;
-width: 17;
-padding-left: 18px;
-opacity:0.6;
+  font-size: 12px;
+  float: right;
+  position: relative;
+  right: 6px;
+  padding-top: 8px;
+  background: url("../images/view-icon-24x.24png") no-repeat scroll 0 7;
+  width: 17;
+  padding-left: 18px;
+  opacity:0.6;
 }

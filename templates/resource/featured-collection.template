@@ -7,7 +7,7 @@
 	      var displayName = data[i].displayName;
 	      %>
 <div class="featuredCollectionBox featuredOne">
- <a target="_blank" href="http://www.goorulearning.org/gooru/index.g#!/collection/<%=gooruOid%>/play"> <div class="playIcon" style="display:none;"></div></a>
+ <a target="_blank" href="http://www.goorulearning.org/classic/index.g#!/collection/<%=gooruOid%>/play"> <div class="playIcon" style="display:none;"></div></a>
 <img class="featureImg" src="<%=imageUrl%>" width=380 height=240 />
   <div class="titleBox"><span class="featurTitle"><%=title%></span></div>
 

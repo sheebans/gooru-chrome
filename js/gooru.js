@@ -94,12 +94,12 @@ var helper = {
 	        $(".searchCollectionBox").mouseover(function(){
 		$(this).find(".collectionImageOverlay").stop(true, true).fadeIn(900);		
 		$(this).find(".collectionImageOverlay").css("display","block");
-// 		$(this).find(".playIcon").css("display","block");
+		$(this).find(".playIconSmall").css("display","block");
 	      }); 
 	      $(".searchCollectionBox").mouseout(function(){
 		$(this).find(".collectionImageOverlay").stop(true, true).fadeOut(500);
 		$(this).find(".collectionImageOverlay").css("display","none");
-// 		$(this).find(".playIcon").css("display","none");
+		$(this).find(".playIconSmall").css("display","none");
 	      });
 	      helper.activateScrollDown();
 	  }
