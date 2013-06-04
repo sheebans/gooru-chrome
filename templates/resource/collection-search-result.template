@@ -2,7 +2,7 @@
 
 function stringTruncate(string, limit) {
     var trimmed = "...";
-    if(string.length > limit) {
+    if(string !=null && string.length > limit) {
       string = string.substring(0, limit) + trimmed;
     }
      return string;
