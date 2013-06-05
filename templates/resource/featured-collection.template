@@ -5,7 +5,7 @@
 	      var gooruOid = data[i].scollections[0].gooruOid;
 	      var title = data[i].scollections[0].title;
 	      var displayName = data[i].displayName;
-	      %>
+%>
 <div class="featuredCollectionBox featuredOne">
  <a target="_blank" href="http://www.goorulearning.org/classic/index.g#!/collection/<%=gooruOid%>/play"> <div class="playIcon" style="display:none;"></div></a>
 <img class="featureImg" src="<%=imageUrl%>" width=380 height=240 />

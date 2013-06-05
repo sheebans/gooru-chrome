@@ -390,3 +390,21 @@ ul.supportersLogo a {
   padding-left: 18px;
   opacity:0.6;
 }
+
+
+/*  */
+.searchFilters  {
+  height:500px;
+  overflow:auto;
+}
+.searchFilters ul li {
+  list-style-type:none;
+    color: #515151;
+    font-size: 14px;
+    margin-left: 4px;
+    text-decoration: none;
+    padding:5px;
+}
+.searchFilters ul{
+  padding-left:0;
+}
