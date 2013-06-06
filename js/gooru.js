@@ -69,11 +69,22 @@ var helper = {
 	}
       });    
   },
-   loadSearchResults:function(searchKeyword,pageNum,append) {
-   
+   loadSearchResults:function(searchKeyword,pageNum,append,category,fltSubjectName) {
+   var URL = GOORU_REST_ENDPOINT + "/search/scollection";
+     if(typeof category !="undefined" || typeof fltSubjectName !="undefined"){
+       URL+="?";
+     }
+     if(typeof category !="undefined"){
+       URL+="category="+category;
+       URL+="&";
+    }
+    
+    if(typeof fltSubjectName !="undefined"){
+      URL+="flt.subjectName="+fltSubjectName;
+    }
       $.ajax ({
 	  type : 'GET',
-	  url  : GOORU_REST_ENDPOINT + "/search/scollection",
+	  url  : URL,
 	  cache: false,
 	  data:{
 	    sessionToken:USER.sessionToken,
@@ -115,13 +126,54 @@ var helper = {
 $(document).ready(function() {
    helper.userSignin();
    helper.loadFeaturedCollection();
-   
+   if ($('.videos').is(":checked")) {
+     alert("hi");
+    }
    $("#gooruChromeSearchTextField").keyup(function(event){
       if(event.which == 13) {
 	var searchKeyword= $(this).val();
 	helper.loadSearchResults(searchKeyword,1,false);
       }
   });
+   
+  $(".category").die().live("click",function(){
+//     console.log("asdfaasdfasf");
+    var categories="";
+      $(".category").each(function(){
+	  if($(this).is(":checked")){
+	      if(categories.length > 0){
+		  categories+=",";
+	      }
+	      categories+=$(this).val();
+	  }
+      });
+      
+      var keyword=$("#gooruChromeSearchTextField").val();
+      if(keyword.length > 0 && categories.length > 0 ){
+	
+	helper.loadSearchResults(keyword,1,false,categories);
+      }
+  });
+  
+    $(".fltSubjectName").die().live("click",function(){
+//     console.log("wwwwww");
+    var fltSubjectNames="";
+      $(".fltSubjectName").each(function(){
+	  if($(this).is(":checked")){
+	      if(fltSubjectNames.length > 0){
+		  fltSubjectNames+=",";
+	      }
+	      fltSubjectNames+=$(this).val();
+	  }
+      });
+      
+      var keyword=$("#gooruChromeSearchTextField").val();
+      if(keyword.length > 0 && fltSubjectNames.length > 0 ){
+	
+	helper.loadSearchResults(keyword,1,false,fltSubjectNames);
+      }
+  });
+  
   
 });
 
