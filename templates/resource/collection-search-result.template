@@ -33,7 +33,7 @@ for(var i in data.searchResults) {
 	  <!-- <span class="didYouKnowText">Description </span> -->
 	  <span class="description"><%= stringTruncate(description, 100)%></span>
 	</div>
-    </div>
+    </div> 
   
 </div>
 

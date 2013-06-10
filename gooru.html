@@ -20,9 +20,9 @@
 		  <ul class="categoryList">
 		    <li>Question Resources
 		      <ul class="categoryType">
-			<li><input type="checkbox" name="onlyQuestions" value="onlyQuestion" class="category" />Only</li>
-			<li><input type="checkbox" name="NoQuestion" value="NoQuestion" class="category" />None</li>
-			<li><input type="checkbox" name="all" value="all" class="category" />Interactives</li>	      
+			<li><input type="radio" name="searchFilter" value="onlyQuestion" class="category" />Only</li>
+			<li><input type="radio" name="searchFilter" value="NoQuestion" class="category" />None</li>
+			<li><input type="radio" name="searchFilter" value="all" class="category" />Mixed</li>	      
 		      </ul>
 		      </li>
 <!-- 		      <li>Source</li> -->
@@ -38,10 +38,8 @@
 		      <li class="gradeLevel">
 		      Grade Level
 			  <ul class="subject">
-			    <li><input type="checkbox" name="elementarySchool" value="" class="elementarySchool" />Elementary School</li>
-			    <li><input type="checkbox" name="middleSchool" value="" class="middleSchool" />Middle School</li>
-			    <li><input type="checkbox" name="highSchool" value="" class="highSchool" />High School</li>
-			    <li><input type="checkbox" name="higherEducation" value="" class="higherEducation" />Higher Education</li>	    
+			    <li><input type="checkbox" name="highSchool" value="9-12" class="fltGrade" />High School</li>  
+			    <li><input type="checkbox" name="middleSchool" value="5-8" class="fltGrade" />Middle School</li>		    
 			  </ul>
 		      </li>
 		    </ul>

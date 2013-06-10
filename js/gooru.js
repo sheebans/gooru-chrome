@@ -69,19 +69,25 @@ var helper = {
 	}
       });    
   },
-   loadSearchResults:function(searchKeyword,pageNum,append,category,fltSubjectName) {
+   loadSearchResults:function(searchKeyword,pageNum,append,category,fltSubjectName,fltGrade) {
    var URL = GOORU_REST_ENDPOINT + "/search/scollection";
-     if(typeof category !="undefined" || typeof fltSubjectName !="undefined"){
+     if(category !=null ||  fltSubjectName !=null || fltGrade !=null){
        URL+="?";
      }
-     if(typeof category !="undefined"){
+     if(category !=null){
        URL+="category="+category;
        URL+="&";
     }
     
-    if(typeof fltSubjectName !="undefined"){
+    if(fltSubjectName !=null){
       URL+="flt.subjectName="+fltSubjectName;
+       URL+="&";      
     }
+    if(fltGrade !=null){
+      URL+="flt.grade="+fltGrade;
+       URL+="&";      
+    }
+    
       $.ajax ({
 	  type : 'GET',
 	  url  : URL,
@@ -96,7 +102,9 @@ var helper = {
 	  success:function(data){
 	    EJS.ext=".template";
  	    var featuredCollectionTemplate = new EJS({url:'templates/resource/collection-search-result'}).render({data:data});
-	    
+	    if(data.searchResults.length  == 0){
+	      featuredCollectionTemplate='<div class="noResults"> Sorry! No Results Found....</div>';
+	    }
 	  if(append){
 	       $("#gooruContentDiv").append(featuredCollectionTemplate);
 	  }else{
@@ -156,7 +164,7 @@ $(document).ready(function() {
   });
   
     $(".fltSubjectName").die().live("click",function(){
-//     console.log("wwwwww");
+//      console.log("Subject name showing here......!");
     var fltSubjectNames="";
       $(".fltSubjectName").each(function(){
 	  if($(this).is(":checked")){
@@ -170,10 +178,30 @@ $(document).ready(function() {
       var keyword=$("#gooruChromeSearchTextField").val();
       if(keyword.length > 0 && fltSubjectNames.length > 0 ){
 	
-	helper.loadSearchResults(keyword,1,false,fltSubjectNames);
+	helper.loadSearchResults(keyword,1,false,null,fltSubjectNames);
       }
   });
   
+    
+        $(".fltGrade").die().live("click",function(){
+//      console.log("Grade showing here......!");
+    var fltGrades="";
+      $(".fltGrade").each(function(){
+	  if($(this).is(":checked")){
+	      if(fltGrades.length > 0){
+		  fltGrades+=",";
+	      }
+	      fltGrades+=$(this).val();
+	  }
+      });
+      
+      var keyword=$("#gooruChromeSearchTextField").val();
+      if(keyword.length > 0 && fltGrades.length > 0 ){
+	
+	helper.loadSearchResults(keyword,1,false,null,null,fltGrades);
+      }
+  });
+
   
 });
 

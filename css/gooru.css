@@ -408,3 +408,8 @@ ul.supportersLogo a {
 .searchFilters ul{
   padding-left:0;
 }
+.noResults {
+  top:62px;
+  position:relative;
+  color:red;
+}
