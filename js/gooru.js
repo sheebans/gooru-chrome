@@ -31,12 +31,13 @@ var helper = {
       });
   },
   activateScrollDown:function(){
-     //Load data on scroll 
+     //Load data on scroll
    $contentLoadTriggered = false;
    $(window).scroll(function(){
         if  ($(window).scrollTop() == $(document).height() - $(window).height()){
 	  $("#scrollContentLoader").addClass("loading");
-	    helper.loadSearchResults($("#gooruChromeSearchTextField").val(),++pageNum,true);
+// 	    $("#gooruContentDiv").append("<div class='showDiv'>ihnijnii i i i i i i i i </div>");
+	   helper.loadSearchResults($("#gooruChromeSearchTextField").val(),++pageNum,true);
         }
    }); 
   },
@@ -53,12 +54,12 @@ var helper = {
 	      $("#gooruChromeSearchResultContainer").html(featuredCollectionTemplate);
     
 	      $(".featuredCollectionBox").mouseover(function(){
-		$(this).find(".featuredCollectionDetailBox").stop(true, true).fadeIn(700);		
+		$(this).find(".featuredCollectionDetailBox").stop(true, true).fadeIn(400);		
 		$(this).find(".featuredCollectionDetailBox").css("display","block");
 		$(this).find(".playIcon").css("display","block");
 	      }); 
 	      $(".featuredCollectionBox").mouseout(function(){
-		$(this).find(".featuredCollectionDetailBox").stop(true, true).fadeOut(500);
+		$(this).find(".featuredCollectionDetailBox").stop(true, true).fadeOut(400);
 		$(this).find(".featuredCollectionDetailBox").css("display","none");
 		$(this).find(".playIcon").css("display","none");
 	      });
@@ -111,17 +112,18 @@ var helper = {
 	      $("#gooruContentDiv").html(featuredCollectionTemplate);
 	      
 	        $(".searchCollectionBox").mouseover(function(){
-		$(this).find(".collectionImageOverlay").stop(true, true).fadeIn(900);		
+		$(this).find(".collectionImageOverlay, .playIconSmall").stop(true, true).fadeIn(300);		
 		$(this).find(".collectionImageOverlay").css("display","block");
 		$(this).find(".playIconSmall").css("display","block");
 	      }); 
 	      $(".searchCollectionBox").mouseout(function(){
-		$(this).find(".collectionImageOverlay").stop(true, true).fadeOut(500);
-		$(this).find(".collectionImageOverlay").css("display","none");
+		$(this).find(".collectionImageOverlay, .playIconSmall").stop(true, true).fadeOut(300);
+-		$(this).find(".collectionImageOverlay").css("display","none");
 		$(this).find(".playIconSmall").css("display","none");
 	      });
 	      helper.activateScrollDown();
 	  }
+// 	  $(".showDiv").remove();
 	   $("#scrollContentLoader").removeClass("loading");
 	  }, 
 	error : function(data) {
@@ -164,7 +166,6 @@ $(document).ready(function() {
   });
   
     $(".fltSubjectName").die().live("click",function(){
-//      console.log("Subject name showing here......!");
     var fltSubjectNames="";
       $(".fltSubjectName").each(function(){
 	  if($(this).is(":checked")){
@@ -184,22 +185,21 @@ $(document).ready(function() {
   
     
         $(".fltGrade").die().live("click",function(){
-//      console.log("Grade showing here......!");
-    var fltGrades="";
-      $(".fltGrade").each(function(){
-	  if($(this).is(":checked")){
-	      if(fltGrades.length > 0){
-		  fltGrades+=",";
+	  var fltGrades="";
+	  $(".fltGrade").each(function(){
+	      if($(this).is(":checked")){
+		  if(fltGrades.length > 0){
+		      fltGrades+=",";
+		  }
+		  fltGrades+=$(this).val();
 	      }
-	      fltGrades+=$(this).val();
-	  }
-      });
+	  });
       
-      var keyword=$("#gooruChromeSearchTextField").val();
-      if(keyword.length > 0 && fltGrades.length > 0 ){
-	
-	helper.loadSearchResults(keyword,1,false,null,null,fltGrades);
-      }
+	  var keyword=$("#gooruChromeSearchTextField").val();
+	  if(keyword.length > 0 && fltGrades.length > 0 ){
+	    
+	    helper.loadSearchResults(keyword,1,false,null,null,fltGrades);
+	  }
   });
 
   

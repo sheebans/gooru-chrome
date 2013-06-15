@@ -21,7 +21,7 @@ for(var i in data.searchResults) {
   
 %>
 <div class="searchCollectionBox featuredOne">
- <a target="_blank" href="http://www.goorulearning.org/#!collection-play&id=<%=gooruOid%>"> <div class="playIconSmall" style="display:none;"></div></a>
+ <a target="_blank" href="http://www.goorulearning.org/#!collection-play&id=<%=gooruOid%>"> <div class="playIconSmall" style="display:none;"><div class="right-triangle"></div></div></a>
     <div class="collectionImageDiv">
 	<img class="collectionImg" src="<%=imageUrl%>" width=220 height=140 />
       <div class="viewCounts" title="Views"><%=viewCount%></div>
@@ -33,6 +33,7 @@ for(var i in data.searchResults) {
 	  <!-- <span class="didYouKnowText">Description </span> -->
 	  <span class="description"><%= stringTruncate(description, 100)%></span>
 	</div>
+	
     </div> 
   
 </div>
